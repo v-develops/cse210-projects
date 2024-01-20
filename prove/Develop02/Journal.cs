@@ -39,23 +39,45 @@ public class Journal
     {
         _entries.Clear();
 
-        using (StreamReader reader = new StreamReader(filePath))
+        try
         {
-            while (!reader.EndOfStream)
+            using (StreamReader reader = new StreamReader(filePath))
             {
-                string[] entryData = reader.ReadLine().Split(',');
-                if (entryData.Length == 3)
+                while (!reader.EndOfStream)
                 {
-                    Entry entry = new Entry
+                    string[] entryData = reader.ReadLine().Split(',');
+                    if (entryData.Length == 3)
                     {
-                        _date = entryData[0],
-                        _promptText = entryData[1],
-                        _entryText = entryData[2]
-                    };
-                    _entries.Add(entry);
+                        Entry entry = new Entry
+                        {
+                            _date = entryData[0],
+                            _promptText = entryData[1],
+                            _entryText = entryData[2]
+                        };
+                        _entries.Add(entry);
+                    }
                 }
-            }
 
+            }
+        }
+        catch
+        {
+            Console.WriteLine("");
+            Console.WriteLine("This file doesn't exist!");
+        }
+    }
+
+    public void RemoveFromList()
+    {
+        if (_entries.Any())
+        {
+            _entries.RemoveAt(_entries.Count - 1);
+        }
+
+        else
+        {
+            Console.WriteLine("");
+            Console.WriteLine("No entrys to remove!");
         }
     }
 }

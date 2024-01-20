@@ -10,7 +10,7 @@ class Program
         PromptGenerator prompt = new PromptGenerator();
         Journal journal = new Journal();
 
-        while (userInput != "5")
+        while (userInput != "6")
         {     
 // MENU //
             Console.WriteLine("");
@@ -26,15 +26,16 @@ class Program
 
             Console.WriteLine("1. Write");
             Console.WriteLine("2. Display");
-            Console.WriteLine("3. Load");
-            Console.WriteLine("4. Save");
-            Console.WriteLine("5. Quit");
+            Console.WriteLine("3. Remove");
+            Console.WriteLine("4. Load");
+            Console.WriteLine("5. Save");
+            Console.WriteLine("6. Quit");
 
             Console.WriteLine("");
             Console.Write("What would you like to do? ");
             userInput = Console.ReadLine();
 
-            while (userInput != "1" && userInput != "2" && userInput != "3" && userInput != "4" && userInput != "5")
+            while (userInput != "1" && userInput != "2" && userInput != "3" && userInput != "4" && userInput != "5" && userInput != "6")
             {
                 Console.Write("Error! Type a valid action: ");
                 userInput = Console.ReadLine();
@@ -52,6 +53,9 @@ class Program
                 entry._entryText = Console.ReadLine();
                 
                 journal.AddEntry(entry);
+
+                Console.WriteLine("");
+                Console.WriteLine("-------------------------------------------------------------------------------------");
             }
 // OPTION 2 //
             else if (userInput == "2")
@@ -65,26 +69,59 @@ class Program
             {
                 Console.WriteLine("");
 
-                Console.WriteLine("What is the file name?");
-                string fileName = Console.ReadLine();
+                Console.Write("Do you really want to remove the last added entry? ");
+                userInput = Console.ReadLine();
 
-                journal.LoadFromFile($"{fileName}.txt");
+                while (userInput != "yes" && userInput != "no")
+                {
+                    Console.Write("Error! Respond with yes or no: ");
+                    userInput = Console.ReadLine();
+                }
+
+                if (userInput == "yes")
+                {
+                    journal.RemoveFromList();
+                }
+
+                else
+                {
+
+                }
 
                 Console.WriteLine("");
+                Console.WriteLine("-------------------------------------------------------------------------------------");
             }
 // OPTION 4 //
             else if (userInput == "4")
             {
                 Console.WriteLine("");
+
+                Console.WriteLine("What is the file name?");
+                Console.WriteLine("");
+                Console.Write("> ");
+                string fileName = Console.ReadLine();
+
+                journal.LoadFromFile($"{fileName}.txt");
+
+                Console.WriteLine("");
+                Console.WriteLine("-------------------------------------------------------------------------------------");
+            }
+// OPTION 5 //
+            else if (userInput == "5")
+            {
+                Console.WriteLine("");
                 
                 Console.WriteLine("What is the file name?");
+                Console.WriteLine("");
+                Console.Write("> ");
                 string fileName = Console.ReadLine();
 
                 journal.SaveToFile($"{fileName}.txt");
 
                 Console.WriteLine("");
+                Console.WriteLine("-------------------------------------------------------------------------------------");
             }
-// OPTION 5 //
+// OPTION 6 //
             else
             {
                 Console.WriteLine("");
