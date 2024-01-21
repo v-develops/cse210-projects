@@ -10,7 +10,10 @@ public class PromptGenerator
         "What was the strongest emotion I felt today?",
         "If I had one thing I could do over today, what would it be?",
         "What future jobs or hobbies you really want do to?",
-        "Did you ate something delicious today?"
+        "What was the tastiest food you ate today?",
+        "Are you saving money to buy something?",
+        "What do you did in your free time today?",
+        "How enjoyable was the weather today?"
     };
 
     public string GetRandonPrompt()
