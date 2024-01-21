@@ -63,7 +63,7 @@ public class Journal
         catch
         {
             Console.WriteLine("");
-            Console.WriteLine("This file doesn't exist!");
+            Console.WriteLine("Error! This file doesn't exist.");
         }
     }
 
@@ -77,7 +77,7 @@ public class Journal
         else
         {
             Console.WriteLine("");
-            Console.WriteLine("No entrys to remove!");
+            Console.WriteLine("Error! No entrys to remove.");
         }
     }
 }

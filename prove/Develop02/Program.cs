@@ -10,6 +10,9 @@ class Program
         PromptGenerator prompt = new PromptGenerator();
         Journal journal = new Journal();
 
+        Console.WriteLine("");
+        Console.WriteLine("Welcome to the Journal Program!");
+
         while (userInput != "6")
         {     
 // MENU //
@@ -19,8 +22,6 @@ class Program
 
             Entry entry = new Entry();
 
-            Console.WriteLine("Welcome to the Journal Program!");
-            Console.WriteLine("");
             Console.WriteLine("Please select one of the following choices:");
             Console.WriteLine("");
 
@@ -55,14 +56,14 @@ class Program
                 journal.AddEntry(entry);
 
                 Console.WriteLine("");
-                Console.WriteLine("-------------------------------------------------------------------------------------");
+                Console.WriteLine("----------------------------------------------------------------------------------------");
             }
 // OPTION 2 //
             else if (userInput == "2")
             {
                 Console.WriteLine("");
                 journal.DisplayAll();
-                Console.WriteLine("-------------------------------------------------------------------------------------");
+                Console.WriteLine("----------------------------------------------------------------------------------------");
             }
 // OPTION 3 //
             else if (userInput == "3")
@@ -89,7 +90,7 @@ class Program
                 }
 
                 Console.WriteLine("");
-                Console.WriteLine("-------------------------------------------------------------------------------------");
+                Console.WriteLine("----------------------------------------------------------------------------------------");
             }
 // OPTION 4 //
             else if (userInput == "4")
@@ -104,7 +105,7 @@ class Program
                 journal.LoadFromFile($"{fileName}.txt");
 
                 Console.WriteLine("");
-                Console.WriteLine("-------------------------------------------------------------------------------------");
+                Console.WriteLine("----------------------------------------------------------------------------------------");
             }
 // OPTION 5 //
             else if (userInput == "5")
@@ -119,7 +120,7 @@ class Program
                 journal.SaveToFile($"{fileName}.txt");
 
                 Console.WriteLine("");
-                Console.WriteLine("-------------------------------------------------------------------------------------");
+                Console.WriteLine("----------------------------------------------------------------------------------------");
             }
 // OPTION 6 //
             else
