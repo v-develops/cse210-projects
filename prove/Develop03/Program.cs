@@ -42,13 +42,20 @@ class Program
             Console.Clear();
             scripture.GetDisplayText();
 
-            Console.WriteLine("\nPress Enter to continue or type 'quit' to finish:");
+            Console.WriteLine("\nPress Enter to continue, type 'quit' to finish and type 'rerol' to rerol the hidden words:");
+            Console.WriteLine(" ");
             string input = Console.ReadLine();
 
             if (input.ToLower() == "quit")
                 break;
 
-            scripture.HideRandomWords(1);
+            else if (input.ToLower() == "rerol")
+            {
+                scripture.RerolForWords(16);
+            }
+
+
+            scripture.HideRandomWords(6);
 
         } while (!scripture.IsCompletelyHidden());
 

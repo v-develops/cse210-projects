@@ -21,6 +21,18 @@ public class Scripture
             _words[index].Hide();
         }
     }
+
+    public void RerolForWords(int numberToShow)
+    {
+        Random random = new Random();
+
+        for (int i = 0; i < numberToShow; i++)
+        {
+            int index = random.Next(_words.Count);
+            _words[index].Show();
+        }
+    }
+
     public string GetDisplayText()
     {
         string displayText = $"{_reference.GetDisplayText()}: ";
