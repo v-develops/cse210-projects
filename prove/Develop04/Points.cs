@@ -16,14 +16,14 @@ public class Points
 
     public void PointsChecker()
     {
-        if (_totalPoints == 1000)
+        if (_totalPoints < 1000 )
         {
-            Console.WriteLine("You hit today's point goal! congratulations!");
+            Console.WriteLine("Keep going until you get 1000 points!");
         }
 
         else
         {
-            Console.WriteLine("Keep going until you get 1000 points!");
+            Console.WriteLine("You hit today's point goal! congratulations!");
         }
     }
 
