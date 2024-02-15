@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         // Order Number 1 //
-        Console.WriteLine("----------------------------------------------------------------------------");
+        Console.WriteLine("-----------------------------------------------------------------------------");
 
         Address address1 = new Address("Rua Gabriel Freitas 120", "Salto", "São Paulo", "Brasil");
 
@@ -40,7 +40,7 @@ class Program
 
 
         // Order Number 2 //
-        Console.WriteLine("----------------------------------------------------------------------------");
+        Console.WriteLine("-----------------------------------------------------------------------------");
 
         Address address2 = new Address("2839 Watson Lane", "Charlotte", "North Carolina", "USA");
 
