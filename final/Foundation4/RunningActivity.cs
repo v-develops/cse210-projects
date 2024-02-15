@@ -11,11 +11,13 @@ public class RunningActivity : Activity
         _distance = distance;
     }
 
+    // Get Distance //
     public override double GetDistance()
     {
         return _distance;
     }
 
+    // Get Speed //
     public override double GetSpeed()
     {
         double speed;
@@ -25,6 +27,7 @@ public class RunningActivity : Activity
         return speed;
     }
 
+    // Get Pace //
     public override double GetPace()
     {
         double pace;
@@ -34,6 +37,7 @@ public class RunningActivity : Activity
         return pace;
     }
 
+    // Make Summary //
     public override void MakeSummary()
     {
         Console.WriteLine($"{GetCurrentDate()} Running ({GetLenght()} min) - Distance: {GetDistance()} km - Speed: {GetSpeed()} - Pace: {GetPace()} min per km");

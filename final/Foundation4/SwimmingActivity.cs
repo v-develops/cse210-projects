@@ -5,11 +5,13 @@ public class SwimmingActivity : Activity
     private int _laps;
 
 
+    // Constructor //
      public SwimmingActivity(double length, int laps) : base(length)
     {
         _laps = laps;
     }
 
+    // Get Distance //
     public override double GetDistance()
     {
         double distance;
@@ -19,6 +21,7 @@ public class SwimmingActivity : Activity
         return distance;
     }
 
+    // Get Speed //
     public override double GetSpeed()
     {
         double speed;
@@ -28,6 +31,7 @@ public class SwimmingActivity : Activity
         return speed;
     }
 
+    // Get Pace //
     public override double GetPace()
     {
         double pace;
@@ -37,6 +41,7 @@ public class SwimmingActivity : Activity
         return pace;
     }
 
+    // Make Summary //
     public override void MakeSummary()
     {
         Console.WriteLine($"{GetCurrentDate()} Swimming ({GetLenght()} min) - Distance: {GetDistance()} km - Speed: {GetSpeed()} - Pace: {GetPace()} min per km");
