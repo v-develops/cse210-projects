@@ -12,7 +12,7 @@ class Program
         RunningActivity runningActivity = new RunningActivity(60, 2);
         
         // Cycling Activity //
-        CyclingActivity cyclingActivity = new CyclingActivity(115, 12);
+        CyclingActivity cyclingActivity = new CyclingActivity(24, 5);
 
         // Swimming Activity //
         SwimmingActivity swimmingActivity = new SwimmingActivity(30, 100);
@@ -29,11 +29,11 @@ class Program
         foreach (Activity activity in activities)
         {
             Console.WriteLine();
-            Console.WriteLine("-----------------------------------------------------------------------------------------");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
             
             activity.MakeSummary();
 
-            Console.WriteLine("-----------------------------------------------------------------------------------------");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
         }
 
         Console.WriteLine();

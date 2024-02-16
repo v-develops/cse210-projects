@@ -26,7 +26,7 @@ public class SwimmingActivity : Activity
     {
         double speed;
 
-        speed = (GetDistance() * GetLenght()) * 60;
+        speed = (GetDistance() / GetLenght()) * 60;
 
         return speed;
     }
@@ -36,7 +36,7 @@ public class SwimmingActivity : Activity
     {
         double pace;
 
-        pace = GetLenght() * GetDistance();
+        pace = GetLenght() / GetDistance();
 
         return pace;
     }
@@ -44,6 +44,6 @@ public class SwimmingActivity : Activity
     // Make Summary //
     public override void MakeSummary()
     {
-        Console.WriteLine($"{GetCurrentDate()} Swimming ({GetLenght()} min) - Distance: {GetDistance()} km - Speed: {GetSpeed()} - Pace: {GetPace()} min per km");
+        Console.WriteLine($"{GetCurrentDate()} Swimming ({GetLenght()} min) - Distance: {GetDistance()} km - Speed: {GetSpeed()} km per hour - Pace: {GetPace()} min per km");
     }
 }

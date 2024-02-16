@@ -22,7 +22,7 @@ public class CyclingActivity : Activity
     {
         double distance;
 
-        distance = (GetLenght() * GetSpeed());
+        distance = ((GetSpeed() * GetLenght()) / 60);
 
         return distance;
     }
@@ -32,7 +32,7 @@ public class CyclingActivity : Activity
     {
         double pace;
 
-        pace = GetLenght() * GetDistance();
+        pace = GetLenght() / GetDistance();
 
         return pace;
     }
@@ -40,6 +40,6 @@ public class CyclingActivity : Activity
     // Make Summary //
     public override void MakeSummary()
     {
-        Console.WriteLine($"{GetCurrentDate()} Cycling ({GetLenght()} min) - Distance: {GetDistance()} km - Speed: {GetSpeed()} - Pace: {GetPace()} min per km");
+        Console.WriteLine($"{GetCurrentDate()} Cycling ({GetLenght()} min) - Distance: {GetDistance()} km - Speed: {GetSpeed()} km per hour - Pace: {GetPace()} min per km");
     }
 }
