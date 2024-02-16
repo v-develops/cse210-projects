@@ -26,6 +26,6 @@ public class Product
     // Get Product Info //
     public void GetProduct()
     {
-        Console.WriteLine($"({_name}) - id:{_id} / Total Price: $ {GetPrice()}");
+        Console.WriteLine($"({_name}) - id:{_id} / Total Price: $ {GetPrice()} / Quantity: {_quantity}");
     }
 }

@@ -22,9 +22,9 @@ class Program
         order1.AddProduct(customer1Product2);
         order1.AddProduct(customer1Product3);
 
-        double order1ShippingFee = customer1.ShippingFee();
+        customer1.ShippingFee();
 
-        double order1Total = order1.TotalPrice();
+        order1.TotalPrice();
 
         // Display Order //
         order1.GetShippingLabel();
@@ -54,9 +54,9 @@ class Program
         order2.AddProduct(customer2Product1);
         order2.AddProduct(customer2Product2);
 
-        double order2ShippingFee = customer2.ShippingFee();
+        customer2.ShippingFee();
 
-        double order2Total = order2.TotalPrice();
+        order2.TotalPrice();
 
         // Display Order //
         order2.GetShippingLabel();
